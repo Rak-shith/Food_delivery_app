@@ -13,11 +13,6 @@ const TaskSchema = new mongoose.Schema({
     lowercase: true,
     unique: true
   },
-  dob: {
-    type: String,
-    required: [true, "Enter task name"],
-    trim: true,
-  },
   mobile_no: {
     type: String,
     required: [true, "Enter task name"],

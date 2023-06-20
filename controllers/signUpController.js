@@ -13,7 +13,6 @@ export const signUp = async (req, res) => {
         const newUser = await Sign_up.create({
             name: req.body.name,
             email: req.body.email,
-            dob: req.body.dob,
             mobile_no: req.body.mobile_no,
             password: await bcrypt.hash(req.body.password, 3),
         });

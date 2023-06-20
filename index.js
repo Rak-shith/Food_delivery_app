@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 // route : http://localhost:5000/todos
-app.use('/todos', tasks);
+app.use('/', tasks);
 
 const PORT = process.env.PORT || 5000;
 
