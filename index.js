@@ -2,6 +2,7 @@ import express from 'express';
 import tasks from './routes/tasks.js';
 import connectDB from './db/connect.js';
 import dotenv from 'dotenv';
+import cors from 'cors';
 dotenv.config();
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.json());
 
 // route : http://localhost:5000/todos
 app.use('/', tasks);
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
