@@ -10,9 +10,9 @@ const app = express();
 // Add middleware
 app.use(express.json());
 
-// route : http://localhost:5000/todos
-app.use('/', tasks);
+// route : http://localhost:5000
 app.use(cors());
+app.use('/', tasks);
 
 const PORT = process.env.PORT || 5000;
 
